@@ -1,0 +1,17 @@
+[33mcommit 2b5494fa24180d420928999635231f9a90e94b1b[m[33m ([m[1;36mHEAD -> [m[1;32mnew_feature[m[33m)[m
+Author: alemoore <alexey.murnikoff@yandex.ru>
+Date:   Sat Sep 19 14:19:00 2020 +0300
+
+    Test commit
+
+[33mcommit 3f765cd7a2034c7588a5f9f4661693b474af36a8[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: alemoore <alexey.murnikoff@yandex.ru>
+Date:   Sat Sep 19 14:10:28 2020 +0300
+
+    Test commit
+
+[33mcommit f4f28dec716cffb107b021384e4e993414092680[m
+Author: alemoore <alexey.murnikoff@yandex.ru>
+Date:   Sat Sep 19 13:19:42 2020 +0300
+
+    Initial commit
