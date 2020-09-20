@@ -26,8 +26,6 @@ class CaptionedImageAdapter(private val captions: Array<String?>, private val im
 
     override fun getItemCount() = captions.size
 
-    inner class ViewHolder(val cardView: CardView): RecyclerView.ViewHolder(cardView) {
-
-    }
+    inner class ViewHolder(val cardView: CardView): RecyclerView.ViewHolder(cardView) {}
 }
 
