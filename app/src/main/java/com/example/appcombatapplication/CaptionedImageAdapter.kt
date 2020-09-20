@@ -9,6 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 
 class CaptionedImageAdapter(private val captions: Array<String?>, private val imageIds: Array<Int?>): RecyclerView.Adapter<CaptionedImageAdapter.ViewHolder>() {
+
+    lateinit var listener : Listener
+
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CaptionedImageAdapter.ViewHolder {
         val cardView : CardView = LayoutInflater.from(p0.context).inflate(R.layout.card_captioned_image, p0, false) as CardView
         return ViewHolder(cardView)
@@ -22,6 +25,9 @@ class CaptionedImageAdapter(private val captions: Array<String?>, private val im
         imageView.contentDescription = captions[p1]
         val textView = cardView.findViewById(R.id.info_text) as TextView
         textView.text = captions[p1]
+        cardView.setOnClickListener {
+            listener.onClick(p1)
+        }
     }
 
     override fun getItemCount() = captions.size

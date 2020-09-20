@@ -1,5 +1,6 @@
 package com.example.appcombatapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
@@ -27,6 +28,13 @@ class PizzaFragment : Fragment() {
         pizzaRecycler.adapter = adapter
         val layoutManager = GridLayoutManager(activity, 2)
         pizzaRecycler.layoutManager = layoutManager
+        adapter.listener = object: Listener {
+            override fun onClick(position: Int) {
+                val intent = Intent(activity, PizzaDetailActivity::class.java)
+                intent.putExtra(PIZZA_ID, position)
+                activity?.startActivity(intent)
+            }
+        }
         return pizzaRecycler
     }
 
